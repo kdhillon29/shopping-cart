@@ -5,10 +5,10 @@ import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./CartReducer";
 
 const GlobalState = props => {
   const products = [
-    { id: "p1", title: "Smart watch", price: 29.99 },
-    { id: "p2", title: "Samsung Watch", price: 9.99 },
-    { id: "p3", title: "Apple Watch", price: 14.59 },
-    { id: "p4", title: "Classic Watch", price: 50.29 }
+    { id: "p1", img:"apple-watch.jpg", title: "Smart watch", price: 29.99 },
+    { id: "p2",img:"samsung-watch.jpg", title: "Samsung Watch", price: 9.99 },
+    { id: "p3",img:"apple-watch.jpg", title: "Apple Watch", price: 14.59 },
+    { id: "p4",img:"classic-watch.jpg", title: "Classic Watch", price: 50.29 }
   ];
   // const [cart, setCart] = useState([]);
   const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });

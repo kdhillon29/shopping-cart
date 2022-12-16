@@ -14,7 +14,7 @@ function ProductList() {
        console.log(products)
     return (
        
-            <div className="d-flex row gap-5">
+            <div className="row justify-content-center">
 
            {products.map((product,index)=><Product key={index} product={product}/>)}
             </div>

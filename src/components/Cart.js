@@ -38,7 +38,7 @@ function Cart() {
             </li>
           ))}
         </ul>
-      {  itemCount &&  <div> <h2>Total:{total} of {itemCount} products </h2></div>}
+      {  itemCount>0 &&  <div> <h2>Total:{total} of {itemCount} products </h2></div>}
       </main>
      );
 }

@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Product({product}) {
     console.log(product)
-    const {title,price} =product
+    const {title,price,img} =product
       const {addProductToCart} =useContext(CartContext)
       const notify = () => {
         console.log('toaat')
@@ -28,10 +28,10 @@ function Product({product}) {
     return (
        
 
-        <div className="card mx-auto col-md-4 col-6 mt-5">
+        <div className="card  col-md-4 col-6 mt-2">
             <ToastContainer />
             <img className='mx-auto img-thumbnail'
-                src="https://i.imgur.com/pjITBzX.jpg"
+                src={`../assets/${img}`}
                 alt="product"
                 width="auto" height="auto">
             </img>
