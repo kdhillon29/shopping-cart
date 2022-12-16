@@ -1,6 +1,19 @@
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
+
+export const sumItems = (cartItems) => {
+    
+    let itemCount = cartItems.reduce(
+      (total, product) => total + product.quantity,
+      0
+    );
+    let total = cartItems
+      .reduce((total, product) => total + product.price * product.quantity, 0)
+      .toFixed(2);
+    return { itemCount, total };
+  };
+
 const addProductToCart = (product, state) => {
   const updatedCart = [...state.cart];
   const updatedItemIndex = updatedCart.findIndex(
@@ -16,7 +29,7 @@ const addProductToCart = (product, state) => {
     updatedItem.quantity++;
     updatedCart[updatedItemIndex] = updatedItem;
   }
-  return { ...state, cart: updatedCart };
+  return { ...state, cart: updatedCart,...sumItems(updatedCart) };
 };
 
 const removeProductFromCart = (productId, state) => {
@@ -33,7 +46,7 @@ const removeProductFromCart = (productId, state) => {
   } else {
     updatedCart[updatedItemIndex] = updatedItem;
   }
-  return { ...state, cart: updatedCart };
+  return { ...state, cart: updatedCart,...sumItems(updatedCart) };
 };
 
 export const shopReducer = (state, action) => {

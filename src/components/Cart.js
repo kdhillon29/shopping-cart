@@ -3,7 +3,7 @@ import CartContext from "../Context/Cart/CartContext";
 import "./Cart.css"
 
 function Cart() {
-    const {cart,removeProductFromCart} =useContext(CartContext)
+    const {cart,total,itemCount,addProductToCart,removeProductFromCart} =useContext(CartContext)
     console.log(cart)
     return ( 
         <main className="shopping-cart">
@@ -15,6 +15,16 @@ function Cart() {
                 <strong>{cartItem.title}</strong> - ${cartItem.price} (
                 {cartItem.quantity})
               </div>
+              <div>
+                <input type="number" value={cartItem.quantity} />
+              <button onClick={()=>addProductToCart(cartItem)} class="btn btn-secondary ">+</button>
+              <button onClick={removeProductFromCart.bind(
+                    this,
+                    cartItem.id
+                  )} class="btn btn-secondary ml-1 ">-</button>
+              </div>
+             
+              
               <div>
                 <button
                   onClick={removeProductFromCart.bind(
@@ -28,6 +38,7 @@ function Cart() {
             </li>
           ))}
         </ul>
+        <div> <h2>Total:{total} of {itemCount} products </h2></div>
       </main>
      );
 }
