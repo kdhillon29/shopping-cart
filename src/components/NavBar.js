@@ -13,7 +13,7 @@ import "./NavBar.css";
     <nav>
       <ul className="">
         <li>
-          <NavLink to="/">Products</NavLink>
+          <NavLink to="/"><h2>Products </h2></NavLink>
         </li>
         <li>
           <NavLink to="/cart"><img src={cart} alt="cart" width="50"></img>

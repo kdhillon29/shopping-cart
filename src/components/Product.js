@@ -28,7 +28,7 @@ function Product({product}) {
     return (
        
 
-        <div className="card mx-auto col-md-4 col-10 mt-5">
+        <div className="card mx-auto col-md-4 col-6 mt-5">
             <ToastContainer />
             <img className='mx-auto img-thumbnail'
                 src="https://i.imgur.com/pjITBzX.jpg"

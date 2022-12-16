@@ -7,7 +7,7 @@ function Cart() {
     console.log(cart)
     return ( 
         <main className="shopping-cart">
-        {cart.length <= 0 && <p>No Item in the Cart!</p>}
+        {cart.length <= 0 && <h2 style={{textAlign:'center'}}> Cart Empty!</h2>}
         <ul>
           {cart.map(cartItem => (
             <li key={cartItem.id}>
@@ -38,7 +38,7 @@ function Cart() {
             </li>
           ))}
         </ul>
-        <div> <h2>Total:{total} of {itemCount} products </h2></div>
+      {  itemCount &&  <div> <h2>Total:{total} of {itemCount} products </h2></div>}
       </main>
      );
 }
