@@ -33,7 +33,7 @@ function Product({product}) {
            <div className="mx-auto w-50" style={{ width:"150px", height:"150px",overflow:"hidden"}} >
 
             <img className='mx-auto img-thumbnail '
-                src={`/assets/${img}`}
+                src={`assets/${img}`}
                 alt="product"
                 >
             </img>
