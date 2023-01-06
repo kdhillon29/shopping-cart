@@ -28,13 +28,16 @@ function Product({product}) {
     return (
        
 
-        <div className="card  col-md-4 col-6 mt-2">
+        <div  className="card  col-md-4 col-6 mt-2">
             <ToastContainer />
-            <img className='mx-auto img-thumbnail'
-                src={`../assets/${img}`}
+           <div className="mx-auto w-50" style={{ width:"150px", height:"150px",overflow:"hidden"}} >
+
+            <img className='mx-auto img-thumbnail '
+                src={`/assets/${img}`}
                 alt="product"
-                width="auto" height="auto">
+                >
             </img>
+           </div>
             <div className="card-body text-center mx-auto">
                 <div className='cvp'>
                     <h5 className="card-title font-weight-bold">{title}</h5>
