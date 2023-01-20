@@ -1,7 +1,7 @@
 # A Shopping cart App 
 A  single page react based web app made with reaactJS context-apiand hooks
 
-![shopping-cart](https://vercel.com/b586d8c4-6e01-486c-ba50-fb371a53a48f)
+<img src="project-shoppingcart.png" height="100" width="200" >
 
 ## Tech stack
 1.React Hooks
